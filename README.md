@@ -1,3 +1,167 @@
+<p align="center">
+  <img src="./Ragie_logo.png" alt="Ragie Logo" width="140" />
+</p>
+
+<h1 align="center">RAGIE Python SDK</h1>
+<p align="center"><strong>RAG as a Service — secure Retrieval-Augmented Generation APIs for developers</strong></p>
+
+<div align="center">
+
+<a href="https://pypi.org/project/ragie/"><img alt="PyPI" src="https://img.shields.io/pypi/v/ragie.svg"></a>
+<img alt="Python" src="https://img.shields.io/pypi/pyversions/ragie.svg">
+<a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
+<a href="https://docs.ragie.ai/docs/getting-started"><img alt="Docs" src="https://img.shields.io/badge/Docs-ragie.ai-4b9ce2.svg"></a>
+<a href="https://discord.gg/wJnCeAmMpT"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-blueviolet.svg"></a>
+
+</div>
+
+---
+
+## Overview
+
+RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) APIs. Use this Python SDK to:
+- Ingest documents (structured/unstructured) with optional metadata for flexible filtering  
+- Retrieve high-quality context using semantic search, optional reranking, and metadata filters  
+- Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more)  
+- Build reliable, scalable RAG apps fast — without managing vector databases, chunking, or pipelines yourself  
+
+Helpful links:  
+- Getting started: https://docs.ragie.ai/docs/getting-started  
+- API reference: https://docs.ragie.ai/reference  
+- SDK docs: https://docs.ragie.ai/docs/ragie-python  
+
+---
+
+## Why RAGIE
+
+- **Speed to value** – Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
+- **Quality retrieval** – Metadata filters and optional reranking improve precision and relevance.  
+- **Secure by design** – Bearer-token auth and server-side security for enterprise use cases.  
+- **Flexible ingestion** – Many file types supported; update documents or metadata independently.  
+- **Connectors** – Sync content from Google Drive, Notion, Confluence, and more with automatic updates.  
+- **SDKs & integrations** – Official Python and TypeScript SDKs + LangChain, Mastra, and low-code platforms.  
+
+---
+
+## Quick Start
+
+### 1) Install
+
+```bash
+pip install ragie
+```
+
+Poetry:
+```bash
+poetry add ragie
+```
+
+Shell (no project setup) via uv:
+```bash
+uvx --from ragie python
+```
+
+### 2) Authenticate
+
+RAGIE uses HTTP Bearer authentication:
+
+```
+authorization: Bearer <your_api_key>
+```
+
+### 3) Ingest a document
+
+```python
+from ragie import Ragie
+
+with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
+    res = client.documents.create(request={
+        "file": {
+            "file_name": "example.pdf",
+            "content": open("example.pdf", "rb"),
+        },
+        # Optional metadata for later filtering
+        # "metadata": {"department": "sales", "region": "emea"}
+    })
+    print(res)
+```
+
+### 4) Retrieve context for your query
+
+```python
+from ragie import Ragie
+
+with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
+    res = client.retrievals.retrieve(request={
+        "query": "What are the Q3 highlights?",
+        # "filter": {"department": {"$in": ["sales", "marketing"]}},  # optional
+        # "rerank": True                                              # optional
+    })
+    print(res.chunks)   # context suitable for an LLM
+```
+
+---
+
+## Connections (Integrations)
+
+RAGIE offers connectors that automatically sync documents from popular services:
+
+• Google Drive • Notion • Confluence • and more  
+
+See docs: https://docs.ragie.ai/docs/connections
+
+Example workflow:
+
+```python
+from ragie import Ragie
+import ragie
+
+with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
+    # 1) Discover source types
+    print(client.connections.list_connection_source_types())
+
+    # 2) (OAuth) Obtain redirect URL
+    redirect = client.connections.create_o_auth_redirect_url()
+    print("Visit:", redirect.url)
+
+    # 3) Create a connection (example: GCS)
+    conn = client.connections.create_connection(
+        request=ragie.PublicCreateConnection(
+            partition_strategy=ragie.MediaModeParam(),
+            connection=ragie.PublicGCSConnection(
+                data=ragie.BucketData(bucket="<your-bucket>"),
+                credentials={"key": "<value>", "key1": "<value>"},
+            ),
+        )
+    )
+    print(conn.id)
+
+    # 4) Trigger sync
+    client.connections.sync(connection_id=conn.id)
+```
+
+---
+
+## Key Features
+
+- **Documents** – Multiple file types, updatable content & metadata.  
+- **Retrieval** – Semantic search, metadata filters, optional reranking.  
+- **Connectors** – Google Drive, Notion, Confluence, etc., auto-sync.  
+- **Ecosystem** – Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
+
+---
+
+## Tips, News, and Updates
+
+- Latest SDK version: see `RELEASES.md`.  
+- Quick start guide: https://docs.ragie.ai/docs/getting-started  
+- Join our community: https://discord.gg/wJnCeAmMpT  
+- Need an integration? Let us know on Discord!  
+
+---
+
+## Advanced SDK Reference
+
 # ragie
 
 <div align="left">
