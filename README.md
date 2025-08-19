@@ -15,6 +15,16 @@
 
 </div>
 
+<h4 align="center">
+    <p>
+        <a href="https://docs.ragie.ai/docs/getting-started">Documentation</a> |
+        <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
+        <a href="#quick-start">Getting&nbsp;Started</a> |
+        <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
+        <a href="https://ragie.ai">RAGIE&nbsp;Platform</a>
+    <p>
+</h4>
+
 ---
 
 ## Overview
@@ -24,11 +34,6 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - Retrieve high-quality context using semantic search, optional reranking, and metadata filters  
 - Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more)  
 - Build reliable, scalable RAG apps fast — without managing vector databases, chunking, or pipelines yourself  
-
-Helpful links:  
-- Getting started: https://docs.ragie.ai/docs/getting-started  
-- API reference: https://docs.ragie.ai/reference  
-- SDK docs: https://docs.ragie.ai/docs/ragie-python  
 
 ---
 
