@@ -48,6 +48,24 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ---
 
+## Key Features
+
+- **Documents** – Multiple file types, updatable content & metadata.  
+- **Retrieval** – Semantic search, metadata filters, optional reranking.  
+- **Connectors** – Google Drive, Notion, Confluence, etc., auto-sync.  
+- **Ecosystem** – Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
+
+---
+
+## Tips, News, and Updates
+
+- Latest SDK version: see `RELEASES.md`.  
+- Quick start guide: https://docs.ragie.ai/docs/getting-started  
+- Join our community: https://discord.gg/wJnCeAmMpT  
+- Need an integration? Let us know on Discord!  
+
+---
+
 ## Quick Start
 
 ### 1) Install
@@ -144,24 +162,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
     # 4) Trigger sync
     client.connections.sync(connection_id=conn.id)
 ```
-
----
-
-## Key Features
-
-- **Documents** – Multiple file types, updatable content & metadata.  
-- **Retrieval** – Semantic search, metadata filters, optional reranking.  
-- **Connectors** – Google Drive, Notion, Confluence, etc., auto-sync.  
-- **Ecosystem** – Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
-
----
-
-## Tips, News, and Updates
-
-- Latest SDK version: see `RELEASES.md`.  
-- Quick start guide: https://docs.ragie.ai/docs/getting-started  
-- Join our community: https://discord.gg/wJnCeAmMpT  
-- Need an integration? Let us know on Discord!  
 
 ---
 
