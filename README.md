@@ -17,22 +17,12 @@
 
 <h4 align="center">
     <p>
-        <a href="https://docs.ragie.ai/docs/getting-started">Documentation</a> |
-        <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
         <a href="#quick-start">Getting&nbsp;Started</a> |
+        <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
         <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
         <a href="https://ragie.ai">RAGIE&nbsp;Platform</a>
     </p>
 </h4>
-
-## Table of Contents
-- [Overview](#overview)
-- [Why RAGIE?](#why-ragie)
-- [Key Features](#key-features)
-- [Tips, News, and Updates](#tips-news-and-updates)
-- [Quick Start](#quick-start)
-- [Connections (Integrations)](#connections-integrations)
-- [Advanced SDK Reference](#advanced-sdk-reference)
 
 ---
 
@@ -192,27 +182,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
-## Table of Contents
-<!-- $toc-max-depth=2 -->
-* [ragie](#ragie)
-  * [SDK Installation](#sdk-installation)
-  * [IDE Support](#ide-support)
-  * [SDK Example Usage](#sdk-example-usage)
-  * [Available Resources and Operations](#available-resources-and-operations)
-  * [Pagination](#pagination)
-  * [File uploads](#file-uploads)
-  * [Retries](#retries)
-  * [Error Handling](#error-handling)
-  * [Server Selection](#server-selection)
-  * [Custom HTTP Client](#custom-http-client)
-  * [Authentication](#authentication)
-  * [Resource Management](#resource-management)
-  * [Debugging](#debugging)
-* [Development](#development)
-  * [Maturity](#maturity)
-  * [Contributions](#contributions)
-* [ragie-python](#ragie-python)
-
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
