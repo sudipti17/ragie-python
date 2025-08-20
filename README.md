@@ -81,7 +81,7 @@ pip install ragie
 
 Poetry is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
 
-```bash
+The same SDK client can also be used to make asynchronous requests by importing asyncio.
 poetry add ragie
 ```
 
