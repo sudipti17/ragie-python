@@ -20,24 +20,23 @@
         <a href="#quick-start">Getting&nbsp;Started</a> |
         <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
         <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
-        <a href="https://ragie.ai">RAGIE&nbsp;Platform</a>
+        <a href="https://ragie.ai">ragie&nbsp;Platform</a>
     </p>
 </h4>
 
 
 ## Overview
 
-RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) APIs. Use this Python SDK to:
-- Ingest documents (structured/unstructured) with optional metadata for flexible filtering  
-- Retrieve high-quality context using semantic search, optional reranking, and metadata filters  
-- Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more)  
-- Build reliable, scalable RAG apps fast without managing vector databases, chunking, or pipelines yourself  
+ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) APIs. Use this Python SDK to:
+- Ingest documents (structured/unstructured) with optional metadata for flexible filtering.
+- Retrieve high-quality context using semantic search, optional reranking, and metadata filters.
+- Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more).
+- Build reliable, scalable RAG apps fast without managing vector databases, chunking, or pipelines yourself.
 
 
-## Why RAGIE?
+## Why ragie?
 
-- **Speed to value**: Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
-- **Speed to value**: Go from zero to a functioning RAG system in minutes no infrastructure to manage.  
+- **Speed to value**: Go from zero to a functioning RAG system in minutes: no infrastructure to manage.  
 - **Quality retrieval**: Metadata filters and optional reranking improve precision and relevance.  
 - **Secure by design**: Bearer-token auth and server-side security for enterprise use cases.  
 - **Flexible ingestion**: Many file types supported; update documents or metadata independently.  
@@ -65,29 +64,63 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ### 1) Install
 
+#### PIP
+
+PIP is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
+
 ```bash
 pip install ragie
 ```
 
-Poetry:
+#### Poetry
+
+Poetry is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
+
 ```bash
 poetry add ragie
 ```
 
-Shell (no project setup) via uv:
+#### Shell and script usage with uv
+
+You can use this SDK in a Python shell with uv and the `uvx` command that comes with it like so:
+
 ```bash
 uvx --from ragie python
 ```
 
+It's also possible to write a standalone Python script without needing to set up a whole project like so:
+
+```
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "ragie",
+# ]
+# ///
+
+from ragie import Ragie
+
+sdk = Ragie(
+  # SDK arguments
+)
+
+# Rest of script here...
+```
+
+Once that is saved to a file, you can run it with `uv run script.py` where `script.py` can be replaced with the actual file name.
+
 ### 2) Authenticate
 
-RAGIE uses HTTP Bearer authentication:
+ragie uses HTTP Bearer authentication:
 
 ```
 authorization: Bearer <your_api_key>
 ```
 
 ### 3) Ingest a document
+
+Uploads a local file and creates a document; you can also attach metadata for filtering.
 
 ```python
 from ragie import Ragie
@@ -106,6 +139,8 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 
 ### 4) Retrieve context for your query
 
+Runs a retrieval query and returns ranked context chunks; you can optionally filter by metadata and enable reranking.
+
 ```python
 from ragie import Ragie
 
@@ -119,13 +154,24 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 ```
 
 
+## IDE Support
+
+### PyCharm
+
+Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic plugin for improved model type-hinting and validation support:
+
+- https://docs.pydantic.dev/latest/integrations/pycharm/
+
+
 ## Connections (Integrations)
 
-RAGIE offers connectors that automatically sync documents from popular services:
+ragie offers connectors that automatically sync documents from popular services:
 
 • Google Drive • Notion • Confluence • and more  
 
 See docs: https://docs.ragie.ai/docs/connections
+
+This example lists source types, generates an OAuth redirect URL, creates a GCS connection, then triggers a sync.
 
 Example workflow:
 
@@ -158,9 +204,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 ```
 
 
-## Advanced SDK Reference
-
-<!-- Start Table of Contents [toc] -->
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
@@ -173,6 +216,8 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 ## SDK Example Usage
 
 ### Example 1
+
+Create a document by uploading a file (sync).
 
 ```python
 # Synchronous Example
@@ -199,6 +244,8 @@ with Ragie(
 </br>
 
 The same SDK client can also be used to make asychronous requests by importing asyncio.
+
+Create a document asynchronously.
 ```python
 # Asynchronous Example
 import asyncio
@@ -212,15 +259,6 @@ async def main():
 
         res = await r_client.documents.create_async(request={
             "file": {
-
-### IDE Support
-
-#### PyCharm
-
-Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic plugin for improved model type-hinting and validation support:
-
-- https://docs.pydantic.dev/latest/integrations/pycharm/
-
                 "file_name": "example.file",
                 "content": open("example.file", "rb"),
             },
@@ -235,6 +273,8 @@ asyncio.run(main())
 ```
 
 ### Example 2
+
+Create a connection (sync).
 
 ```python
 # Synchronous Example
@@ -270,6 +310,8 @@ with Ragie(
 </br>
 
 The same SDK client can also be used to make asychronous requests by importing asyncio.
+
+Create a connection asynchronously.
 ```python
 # Asynchronous Example
 import asyncio
@@ -307,6 +349,8 @@ asyncio.run(main())
 
 ### Example 3
 
+Create an authenticator (sync).
+
 ```python
 # Synchronous Example
 import ragie
@@ -333,6 +377,8 @@ with Ragie(
 </br>
 
 The same SDK client can also be used to make asychronous requests by importing asyncio.
+
+Create an authenticator asynchronously.
 ```python
 # Asynchronous Example
 import asyncio
@@ -361,6 +407,8 @@ asyncio.run(main())
 ```
 
 ### Example 4
+
+Create an authenticator connection (sync).
 
 ```python
 # Synchronous Example
@@ -397,6 +445,8 @@ with Ragie(
 </br>
 
 The same SDK client can also be used to make asychronous requests by importing asyncio.
+
+Create an authenticator connection asynchronously.
 ```python
 # Asynchronous Example
 import asyncio
@@ -873,15 +923,6 @@ async def amain():
 <!-- End Resource Management [resource-management] -->
 
 <!-- Start Debugging [debug] -->
-### IDE Support
-
-#### PyCharm
-
-Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic plugin for improved model type-hinting and validation support:
-
-- https://docs.pydantic.dev/latest/integrations/pycharm/
-
-<!-- Existing Debugging section follows -->
 ### Debugging
 
 You can setup your SDK to emit debug logs for SDK requests and responses.
