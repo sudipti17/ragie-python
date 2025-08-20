@@ -31,12 +31,13 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - Ingest documents (structured/unstructured) with optional metadata for flexible filtering  
 - Retrieve high-quality context using semantic search, optional reranking, and metadata filters  
 - Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more)  
-- Build reliable, scalable RAG apps fast — without managing vector databases, chunking, or pipelines yourself  
+- Build reliable, scalable RAG apps fast without managing vector databases, chunking, or pipelines yourself  
 
 
 ## Why RAGIE?
 
 - **Speed to value** – Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
+- **Speed to value** – Go from zero to a functioning RAG system in minutes no infrastructure to manage.  
 - **Quality retrieval** – Metadata filters and optional reranking improve precision and relevance.  
 - **Secure by design** – Bearer-token auth and server-side security for enterprise use cases.  
 - **Flexible ingestion** – Many file types supported; update documents or metadata independently.  
@@ -892,6 +893,4 @@ looking for the latest version.
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation.
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release.
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=<no value>&utm_campaign=python)
-
-# ragie-python
+SDK created by [Speakeasy](https://www.speakeasy.com/?utm_source=github&utm_medium=readme&utm_campaign=ragie-python-sdk)
