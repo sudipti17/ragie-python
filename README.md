@@ -251,6 +251,8 @@ with Ragie(
 </br>
 
 Create a document asynchronously.
+
+The same SDK client can also be used to make asychronous requests by importing asyncio.
 ```python
 # Asynchronous Example
 import asyncio
@@ -927,6 +929,8 @@ async def amain():
 You can setup your SDK to emit debug logs for SDK requests and responses.
 
 You can pass your own logger class directly into your SDK.
+
+This routes HTTP request/response details through Python’s logging. Setting the level to `DEBUG` prints outbound request URLs, headers, timing, and responses—helpful for diagnosing authentication issues, timeouts, or custom client behavior.
 ```python
 from ragie import Ragie
 import logging
