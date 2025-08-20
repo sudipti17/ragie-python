@@ -22,8 +22,17 @@
         <a href="#quick-start">Getting&nbsp;Started</a> |
         <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
         <a href="https://ragie.ai">RAGIE&nbsp;Platform</a>
-    <p>
+    </p>
 </h4>
+
+## Table of Contents
+- [Overview](#overview)
+- [Why RAGIE?](#why-ragie)
+- [Key Features](#key-features)
+- [Tips, News, and Updates](#tips-news-and-updates)
+- [Quick Start](#quick-start)
+- [Connections (Integrations)](#connections-integrations)
+- [Advanced SDK Reference](#advanced-sdk-reference)
 
 ---
 
@@ -37,7 +46,7 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ---
 
-## Why RAGIE
+## Why RAGIE?
 
 - **Speed to value** – Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
 - **Quality retrieval** – Metadata filters and optional reranking improve precision and relevance.  
