@@ -4,6 +4,7 @@
 
 <h1 align="center">ragie-python</h1>
 <p align="center"><strong>RAG as a Service: secure Retrieval-Augmented Generation APIs for developers</strong></p>
+<div align="center"><hr width="160"/></div>
 
 <div align="center">
 
