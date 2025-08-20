@@ -161,88 +161,13 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 
 # ragie
 
-<div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=<no value>&utm_campaign=python"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
-    <a href="https://opensource.org/licenses/MIT">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
-    </a>
-</div>
-
-<!-- Start Summary [summary] -->
-## Summary
-
-
-<!-- End Summary [summary] -->
-
 <!-- Start Table of Contents [toc] -->
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
-## SDK Installation
-
-> [!NOTE]
-> **Python version upgrade policy**
->
-> Once a Python version reaches its [official end of life date](https://devguide.python.org/versions/), a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum python version supported in the SDK will be updated.
-
-The SDK can be installed with either *pip* or *poetry* package managers.
-
-### PIP
-
-*PIP* is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
-
-```bash
-pip install ragie
-```
-
-### Poetry
-
-*Poetry* is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
-
-```bash
-poetry add ragie
-```
-
-### Shell and script usage with `uv`
-
-You can use this SDK in a Python shell with [uv](https://docs.astral.sh/uv/) and the `uvx` command that comes with it like so:
-
-```shell
-uvx --from ragie python
-```
-
-It's also possible to write a standalone Python script without needing to set up a whole project like so:
-
-```python
-#!/usr/bin/env -S uv run --script
-# /// script
-# requires-python = ">=3.9"
-# dependencies = [
-#     "ragie",
-# ]
-# ///
-
-from ragie import Ragie
-
-sdk = Ragie(
-  # SDK arguments
-)
-
-# Rest of script here...
-```
-
-Once that is saved to a file, you can run it with `uv run script.py` where
-`script.py` can be replaced with the actual file name.
 <!-- End SDK Installation [installation] -->
 
 <!-- Start IDE Support [idesupport] -->
-## IDE Support
-
-### PyCharm
-
-Generally, the SDK will work well with most IDEs out of the box. However, when using PyCharm, you can enjoy much better integration with Pydantic by installing an additional plugin.
-
-- [PyCharm Pydantic Plugin](https://docs.pydantic.dev/latest/integrations/pycharm/)
 <!-- End IDE Support [idesupport] -->
 
 <!-- Start SDK Example Usage [usage] -->
