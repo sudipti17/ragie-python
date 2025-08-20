@@ -60,9 +60,13 @@ ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - Need an integration? Let us know on Discord!  
 
 
-## 🚀 Quick Start
+## SDK Installation
 
-### 1) Install
+> **Note**  
+> *Python version upgrade policy*  
+> Once a Python version reaches its official end-of-life date, a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum Python version supported in the SDK will be updated.
+
+The SDK can be installed with either **pip** or **poetry** package managers.
 
 #### PIP
 
@@ -110,7 +114,10 @@ sdk = Ragie(
 
 Once that is saved to a file, you can run it with `uv run script.py` where `script.py` can be replaced with the actual file name.
 
-### 2) Authenticate
+
+## 🚀 Quick Start
+
+### 1) Authenticate
 
 ragie uses HTTP Bearer authentication:
 
@@ -118,7 +125,7 @@ ragie uses HTTP Bearer authentication:
 authorization: Bearer <your_api_key>
 ```
 
-### 3) Ingest a document
+### 2) Ingest a document
 
 Uploads a local file and creates a document; you can also attach metadata for filtering.
 
@@ -137,7 +144,7 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
     print(res)
 ```
 
-### 4) Retrieve context for your query
+### 3) Retrieve context for your query
 
 Runs a retrieval query and returns ranked context chunks; you can optionally filter by metadata and enable reranking.
 
@@ -243,8 +250,6 @@ with Ragie(
 
 </br>
 
-The same SDK client can also be used to make asychronous requests by importing asyncio.
-
 Create a document asynchronously.
 ```python
 # Asynchronous Example
@@ -308,8 +313,6 @@ with Ragie(
 ```
 
 </br>
-
-The same SDK client can also be used to make asychronous requests by importing asyncio.
 
 Create a connection asynchronously.
 ```python
@@ -376,8 +379,6 @@ with Ragie(
 
 </br>
 
-The same SDK client can also be used to make asychronous requests by importing asyncio.
-
 Create an authenticator asynchronously.
 ```python
 # Asynchronous Example
@@ -443,8 +444,6 @@ with Ragie(
 ```
 
 </br>
-
-The same SDK client can also be used to make asychronous requests by importing asyncio.
 
 Create an authenticator connection asynchronously.
 ```python
