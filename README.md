@@ -24,7 +24,6 @@
     </p>
 </h4>
 
----
 
 ## Overview
 
@@ -34,7 +33,6 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more)  
 - Build reliable, scalable RAG apps fast — without managing vector databases, chunking, or pipelines yourself  
 
----
 
 ## Why RAGIE?
 
@@ -45,7 +43,6 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - **Connectors** – Sync content from Google Drive, Notion, Confluence, and more with automatic updates.  
 - **SDKs & integrations** – Official Python and TypeScript SDKs + LangChain, Mastra, and low-code platforms.  
 
----
 
 ## 🔥 Key Features
 
@@ -54,16 +51,14 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 - **Connectors** – Google Drive, Notion, Confluence, etc., auto-sync.  
 - **Ecosystem** – Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
 
----
 
-## Tips, News, and Updates
+## 📰 Tips, News, and Updates
 
 - Latest SDK version: see `RELEASES.md`.  
 - Quick start guide: https://docs.ragie.ai/docs/getting-started  
 - Join our community: https://discord.gg/wJnCeAmMpT  
 - Need an integration? Let us know on Discord!  
 
----
 
 ## 🚀 Quick Start
 
@@ -122,7 +117,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
     print(res.chunks)   # context suitable for an LLM
 ```
 
----
 
 ## Connections (Integrations)
 
@@ -162,7 +156,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
     client.connections.sync(connection_id=conn.id)
 ```
 
----
 
 ## Advanced SDK Reference
 
