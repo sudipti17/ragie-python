@@ -159,8 +159,6 @@ with Ragie(auth="<YOUR_BEARER_TOKEN_HERE>") as client:
 
 ## Advanced SDK Reference
 
-# ragie
-
 <!-- Start Table of Contents [toc] -->
 <!-- End Table of Contents [toc] -->
 
@@ -865,7 +863,7 @@ async def amain():
 <!-- End Resource Management [resource-management] -->
 
 <!-- Start Debugging [debug] -->
-## Debugging
+### Debugging
 
 You can setup your SDK to emit debug logs for SDK requests and responses.
 
