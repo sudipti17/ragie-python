@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">RAGIE Python SDK</h1>
-<p align="center"><strong>RAG as a Service — secure Retrieval-Augmented Generation APIs for developers</strong></p>
+<p align="center"><strong>RAG as a Service: secure Retrieval-Augmented Generation APIs for developers</strong></p>
 
 <div align="center">
 
@@ -47,7 +47,7 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ---
 
-## Key Features
+## 🔥 Key Features
 
 - **Documents** – Multiple file types, updatable content & metadata.  
 - **Retrieval** – Semantic search, metadata filters, optional reranking.  
@@ -65,7 +65,7 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ### 1) Install
 
