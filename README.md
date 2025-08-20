@@ -873,6 +873,15 @@ async def amain():
 <!-- End Resource Management [resource-management] -->
 
 <!-- Start Debugging [debug] -->
+### IDE Support
+
+#### PyCharm
+
+Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic plugin for improved model type-hinting and validation support:
+
+- https://docs.pydantic.dev/latest/integrations/pycharm/
+
+<!-- Existing Debugging section follows -->
 ### Debugging
 
 You can setup your SDK to emit debug logs for SDK requests and responses.
