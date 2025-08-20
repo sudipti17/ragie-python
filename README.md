@@ -62,11 +62,12 @@ ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ## SDK Installation
 
-> **Note**  
-> *Python version upgrade policy*  
-> Once a Python version reaches its official end-of-life date, a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum Python version supported in the SDK will be updated.
-
-The SDK can be installed with either **pip** or **poetry** package managers.
+> [!NOTE]  
+> Python version upgrade policy  
+>   
+> Once a Python version reaches its official end-of-life date, a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum Python version supported in the SDK will be updated.  
+>   
+> The SDK can be installed with either pip or poetry package managers.
 
 #### PIP
 
@@ -174,7 +175,10 @@ Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic pl
 
 ragie offers connectors that automatically sync documents from popular services:
 
-• Google Drive • Notion • Confluence • and more  
+- Google Drive  
+- Notion  
+- Confluence  
+- and more  
 
 See docs: https://docs.ragie.ai/docs/connections
 
