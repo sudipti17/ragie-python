@@ -62,14 +62,14 @@ ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ## SDK Installation
 
-> [!NOTE]  
-> Python version upgrade policy  
->   
-> Once a Python version reaches its official end-of-life date, a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum Python version supported in the SDK will be updated.  
->   
+> [!NOTE]
+> Python version upgrade policy
+>
+> Once a Python version reaches its official end-of-life date, a 3-month grace period is provided for users to upgrade. Following this grace period, the minimum Python version supported in the SDK will be updated.
+>
 > The SDK can be installed with either pip or poetry package managers.
 
-#### PIP
+### PIP
 
 PIP is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
 
@@ -77,7 +77,7 @@ PIP is the default package installer for Python, enabling easy installation and 
 pip install ragie
 ```
 
-#### Poetry
+### Poetry
 
 Poetry is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
 
@@ -85,7 +85,7 @@ Poetry is a modern tool that simplifies dependency management and package publis
 poetry add ragie
 ```
 
-#### Shell and script usage with uv
+### Shell and script usage with uv
 
 You can use this SDK in a Python shell with uv and the `uvx` command that comes with it like so:
 
