@@ -2,7 +2,7 @@
   <img src="./Ragie_logo.png" alt="Ragie Logo" width="140" />
 </p>
 
-<h1 align="center">RAGIE Python SDK</h1>
+<h1 align="center">ragie-python</h1>
 <p align="center"><strong>RAG as a Service: secure Retrieval-Augmented Generation APIs for developers</strong></p>
 
 <div align="center">
@@ -36,21 +36,21 @@ RAGIE provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ## Why RAGIE?
 
-- **Speed to value** – Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
-- **Speed to value** – Go from zero to a functioning RAG system in minutes no infrastructure to manage.  
-- **Quality retrieval** – Metadata filters and optional reranking improve precision and relevance.  
-- **Secure by design** – Bearer-token auth and server-side security for enterprise use cases.  
-- **Flexible ingestion** – Many file types supported; update documents or metadata independently.  
-- **Connectors** – Sync content from Google Drive, Notion, Confluence, and more with automatic updates.  
-- **SDKs & integrations** – Official Python and TypeScript SDKs + LangChain, Mastra, and low-code platforms.  
+- **Speed to value**: Go from zero to a functioning RAG system in minutes — no infrastructure to manage.  
+- **Speed to value**: Go from zero to a functioning RAG system in minutes no infrastructure to manage.  
+- **Quality retrieval**: Metadata filters and optional reranking improve precision and relevance.  
+- **Secure by design**: Bearer-token auth and server-side security for enterprise use cases.  
+- **Flexible ingestion**: Many file types supported; update documents or metadata independently.  
+- **Connectors**: Sync content from Google Drive, Notion, Confluence, and more with automatic updates.  
+- **SDKs & integrations**: Official Python and TypeScript SDKs + LangChain, Mastra, and low-code platforms.  
 
 
 ## 🔥 Key Features
 
-- **Documents** – Multiple file types, updatable content & metadata.  
-- **Retrieval** – Semantic search, metadata filters, optional reranking.  
-- **Connectors** – Google Drive, Notion, Confluence, etc., auto-sync.  
-- **Ecosystem** – Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
+- **Documents**: Multiple file types, updatable content & metadata.  
+- **Retrieval**: Semantic search, metadata filters, optional reranking.  
+- **Connectors**: Google Drive, Notion, Confluence, etc., auto-sync.  
+- **Ecosystem**: Python & TypeScript SDKs, LangChain, Mastra, low-code platforms.  
 
 
 ## 📰 Tips, News, and Updates
@@ -212,6 +212,15 @@ async def main():
 
         res = await r_client.documents.create_async(request={
             "file": {
+
+### IDE Support
+
+#### PyCharm
+
+Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic plugin for improved model type-hinting and validation support:
+
+- https://docs.pydantic.dev/latest/integrations/pycharm/
+
                 "file_name": "example.file",
                 "content": open("example.file", "rb"),
             },
