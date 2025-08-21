@@ -52,16 +52,16 @@
 
 ## Overview
 
-ragie-python is the official Python SDK for ragie — a managed Retrieval-Augmented Generation (RAG) platform. Instead of setting up vector databases, chunking strategies, or ingestion pipelines, ragie gives you secure, production-ready RAG APIs that you can call directly from Python.
+ragie-python is the official Python SDK for Ragie: a managed Retrieval-Augmented Generation (RAG) platform. Instead of setting up vector databases, chunking strategies, or ingestion pipelines, Ragie gives you secure, production-ready RAG APIs that you can call directly from Python.
 
 With ragie-python, you can:
 - Upload and manage documents with metadata.
 - Run semantic retrieval with optional reranking.
 - Sync external sources (Google Drive, Notion, Confluence, etc.).
-- Build RAG-powered apps in minutes — no infrastructure needed.
+- Build RAG-powered apps in minutes: no infrastructure needed.
 
 
-## Why ragie?
+## Why Ragie?
 
 - **Speed to value**: Go from zero to a functioning RAG system in minutes: no infrastructure to manage.  
 - **Quality retrieval**: Metadata filters and optional reranking improve precision and relevance.  
@@ -564,6 +564,20 @@ asyncio.run(main())
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Pagination [pagination] -->
+
+<a id="advanced-usage"></a>
+
+## ⚙️ Advanced Usage
+
+- [Pagination](#pagination)
+- [File uploads](#file-uploads)
+- [Retries](#retries)
+- [Error Handling](#error-handling)
+- [Custom HTTP Client](#custom-http-client)
+- [Debugging](#debugging)
+
+<!-- Advanced topics listed above; content starts below with Pagination -->
+
 ## Pagination
 
 Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
