@@ -2,7 +2,6 @@
   <img src="./Ragie_logo.png" alt="Ragie Logo" width="140" />
 </p>
 
-<h1 align="center">ragie-python</h1>
 <h2 align="center">RAG as a Service: secure Retrieval-Augmented Generation APIs for developers</h2>
 
 <div align="center">
@@ -56,10 +55,10 @@
 ragie-python is the official Python SDK for ragie — a managed Retrieval-Augmented Generation (RAG) platform. Instead of setting up vector databases, chunking strategies, or ingestion pipelines, ragie gives you secure, production-ready RAG APIs that you can call directly from Python.
 
 With ragie-python, you can:
-- Ingest documents (structured/unstructured) with optional metadata for flexible filtering.
-- Retrieve high-quality context using semantic search, optional reranking, and metadata filters.
-- Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more).
-- Build reliable, scalable RAG apps fast without managing vector databases, chunking, or pipelines yourself.
+- Upload and manage documents with metadata.
+- Run semantic retrieval with optional reranking.
+- Sync external sources (Google Drive, Notion, Confluence, etc.).
+- Build RAG-powered apps in minutes — no infrastructure needed.
 
 
 ## Why ragie?
@@ -112,10 +111,10 @@ poetry add ragie
 ### Shell and script usage with uv
 
 ```bash
-# Python REPL with ragie available
+# Python REPL with Ragie available
 uvx --from ragie python
 
-# Run a script with ragie dependency
+# Run a script with Ragie dependency
 uv run your_script.py
 ```
 
