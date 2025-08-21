@@ -123,7 +123,7 @@ uv run your_script.py
 
 ### 1) Authenticate
 
-ragie uses HTTP Bearer authentication:
+Ragie uses HTTP Bearer authentication:
 
 ```http
 authorization: Bearer <your_api_key>
