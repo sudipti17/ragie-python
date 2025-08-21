@@ -25,9 +25,37 @@
 </h4>
 
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Why ragie?](#why-ragie)
+- [Key Features](#key-features)
+- [Tips, News, and Updates](#tips-news-and-updates)
+- [SDK Installation](#sdk-installation)
+- [Quick Start](#quick-start)
+- [IDE Support](#ide-support)
+- [Connections (Integrations)](#connections-integrations)
+- [SDK Example Usage](#sdk-example-usage)
+- [Available Resources and Operations](#available-resources-and-operations)
+- [Pagination](#pagination)
+- [File uploads](#file-uploads)
+- [Retries](#retries)
+- [Error Handling](#error-handling)
+- [Server Selection](#server-selection)
+- [Custom HTTP Client](#custom-http-client)
+- [Authentication](#authentication)
+- [Resource Management](#resource-management)
+- [Debugging](#debugging)
+- [Development](#development)
+  - [Maturity](#maturity)
+  - [Contributions](#contributions)
+
+
 ## Overview
 
-ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) APIs. Use this Python SDK to:
+ragie-python is the official Python SDK for ragie — a managed Retrieval-Augmented Generation (RAG) platform. Instead of setting up vector databases, chunking strategies, or ingestion pipelines, ragie gives you secure, production-ready RAG APIs that you can call directly from Python.
+
+With ragie-python, you can:
 - Ingest documents (structured/unstructured) with optional metadata for flexible filtering.
 - Retrieve high-quality context using semantic search, optional reranking, and metadata filters.
 - Plug in out-of-the-box connectors (Google Drive, Notion, Confluence, and more).
@@ -71,49 +99,25 @@ ragie provides secure, production-ready Retrieval-Augmented Generation (RAG) API
 
 ### PIP
 
-PIP is the default package installer for Python, enabling easy installation and management of packages from PyPI via the command line.
-
 ```bash
 pip install ragie
 ```
 
 ### Poetry
 
-Poetry is a modern tool that simplifies dependency management and package publishing by using a single `pyproject.toml` file to handle project metadata and dependencies.
-
-The same SDK client can also be used to make asynchronous requests by importing asyncio.
+```bash
 poetry add ragie
 ```
 
 ### Shell and script usage with uv
 
-You can use this SDK in a Python shell with uv and the `uvx` command that comes with it like so:
-
 ```bash
+# Python REPL with ragie available
 uvx --from ragie python
+
+# Run a script with ragie dependency
+uv run your_script.py
 ```
-
-It's also possible to write a standalone Python script without needing to set up a whole project like so:
-
-```
-#!/usr/bin/env -S uv run --script
-# /// script
-# requires-python = ">=3.9"
-# dependencies = [
-#     "ragie",
-# ]
-# ///
-
-from ragie import Ragie
-
-sdk = Ragie(
-  # SDK arguments
-)
-
-# Rest of script here...
-```
-
-Once that is saved to a file, you can run it with `uv run script.py` where `script.py` can be replaced with the actual file name.
 
 
 ## 🚀 Quick Start
@@ -122,7 +126,7 @@ Once that is saved to a file, you can run it with `uv run script.py` where `scri
 
 ragie uses HTTP Bearer authentication:
 
-```
+```http
 authorization: Bearer <your_api_key>
 ```
 
@@ -180,7 +184,7 @@ ragie offers connectors that automatically sync documents from popular services:
 - Confluence  
 - and more  
 
-See docs: https://docs.ragie.ai/docs/connections
+See docs: [Connections](https://docs.ragie.ai/docs/connections)
 
 This example lists source types, generates an OAuth redirect URL, creates a GCS connection, then triggers a sync.
 
@@ -252,7 +256,7 @@ with Ragie(
     print(res)
 ```
 
-</br>
+<!-- line removed -->
 
 Create a document asynchronously.
 
@@ -318,7 +322,7 @@ with Ragie(
     print(res)
 ```
 
-</br>
+<!-- line removed -->
 
 Create a connection asynchronously.
 ```python
@@ -383,7 +387,7 @@ with Ragie(
     print(res)
 ```
 
-</br>
+<!-- line removed -->
 
 Create an authenticator asynchronously.
 ```python
@@ -449,7 +453,7 @@ with Ragie(
     print(res)
 ```
 
-</br>
+<!-- line removed -->
 
 Create an authenticator connection asynchronously.
 ```python
@@ -691,8 +695,8 @@ with Ragie(
 | `err.body`         | `str`            | HTTP body. Can be empty string if no body is returned.                                  |
 | `err.raw_response` | `httpx.Response` | Raw HTTP response                                                                       |
 | `err.data`         |                  | Optional. Some errors may contain structured data. [See Error Classes](#error-classes). |
-
 ### Example
+
 ```python
 import ragie
 from ragie import Ragie, models
