@@ -32,7 +32,7 @@
 - [Tips, News, and Updates](#tips-news-and-updates)
 - [SDK Installation](#sdk-installation)
 - [Quick Start](#quick-start)
-- [⚙️ Advanced Usage](#advanced-usage)
+- [Advanced Usage](#advanced-usage)
 - [IDE Support](#ide-support)
 - [Connections (Integrations)](#connections-integrations)
 - [SDK Example Usage](#sdk-example-usage)
