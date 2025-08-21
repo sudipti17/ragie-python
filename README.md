@@ -27,11 +27,12 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Why ragie?](#why-ragie)
+- [Why Ragie?](#why-ragie)
 - [Key Features](#key-features)
 - [Tips, News, and Updates](#tips-news-and-updates)
 - [SDK Installation](#sdk-installation)
 - [Quick Start](#quick-start)
+- [⚙️ Advanced Usage](#advanced-usage)
 - [IDE Support](#ide-support)
 - [Connections (Integrations)](#connections-integrations)
 - [SDK Example Usage](#sdk-example-usage)
@@ -176,7 +177,7 @@ Generally, the SDK works well in most IDEs. For PyCharm, install the Pydantic pl
 
 ## Connections (Integrations)
 
-ragie offers connectors that automatically sync documents from popular services:
+Ragie offers connectors that automatically sync documents from popular services:
 
 - Google Drive  
 - Notion  
@@ -255,11 +256,7 @@ with Ragie(
     print(res)
 ```
 
-<!-- line removed -->
-
 Create a document asynchronously.
-
-The same SDK client can also be used to make asychronous requests by importing asyncio.
 ```python
 # Asynchronous Example
 import asyncio
