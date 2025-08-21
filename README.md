@@ -16,10 +16,10 @@
 
 <h4 align="center">
     <p>
-        <a href="#quick-start">Getting&nbsp;Started</a> |
+        <a href="https://docs.ragie.ai/docs/getting-started">Getting&nbsp;Started</a> |
         <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
         <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
-        <a href="https://ragie.ai">ragie&nbsp;Platform</a>
+        <a href="https://ragie.ai">Ragie&nbsp;Platform</a>
     </p>
 </h4>
 
