@@ -2,7 +2,9 @@
   <img src="./Ragie_logo.png" alt="Ragie Logo" width="140" />
 </p>
 
-<h2 align="center">RAG as a Service: secure Retrieval-Augmented Generation APIs for developers</h2>
+<h2 align="center">The world’s most connected, fully managed RAG-as-a-Service</h2>
+
+<p align="center"><small>Fully managed multimodal RAG-as-a-Service for developers</small></p>
 
 <div align="center">
 
@@ -18,6 +20,7 @@
     <p>
         <a href="https://docs.ragie.ai/docs/getting-started">Getting&nbsp;Started</a> |
         <a href="https://docs.ragie.ai/reference">API&nbsp;Reference</a> |
+        <a href="https://github.com/ragieai/ragie-mcp-server">MCP&nbsp;Server</a> |
         <a href="https://docs.ragie.ai/docs/connections">Integrations</a> |
         <a href="https://ragie.ai">Ragie&nbsp;Platform</a>
     </p>
