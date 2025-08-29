@@ -2,8 +2,7 @@
   <img src="./Ragie_logo.png" alt="Ragie Logo" width="140" />
 </p>
 
-<h2 align="center">The world’s most connected, fully managed RAG-as-a-Service</h2>
-
+<h2 align="center">The world's most connected RAG-as-a-Service</h2>
 <p align="center"><small>Fully managed multimodal RAG-as-a-Service for developers</small></p>
 
 <div align="center">
